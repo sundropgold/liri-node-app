@@ -18,6 +18,9 @@ var Spotify = require('node-spotify-api');
 // get request package
 var request = require('request');
 
+// declare log text file
+var textFile = "log.txt";
+
 // KEYS ------------------------------------------- //
 
 // the code to grab the data from keys.js
@@ -28,6 +31,7 @@ var twitterAccessTokenSecret = keys.twitterKeys.access_token_secret;
 
 var spotifyClientID = keys.spotifyKeys.client_id;
 var spotifyClientSecret = keys.spotifyKeys.client_secret;
+
 // TWITTER CLIENT ------------------------------------------- //
 
 var client = new Twitter({
@@ -37,6 +41,7 @@ var client = new Twitter({
 	access_token_secret: twitterAccessTokenSecret
 });
 
+// get twitter user orangetxt
 var params = {screen_name: 'orangetxt'};
 
 // SPOTIFY ------------------------------------------- //
@@ -54,9 +59,20 @@ var OMDBKey = "40e9cece";
 
 // - - - - - from command line
 if (process.argv[2] != null || process.argv[2] != "") {
+	
+	// get the command
 	var command = process.argv[2];
 
+	// get the media
 	var media = process.argv.splice(3).join(" ");
+
+	// add command and media to file
+	fs.appendFile(textFile, "\nCommand: " + command + "\nMedia: " + media, function(err){
+
+		if (err) {
+			console.log(err);
+		}
+	});
 
 	// functions for chosen command
 
@@ -71,7 +87,15 @@ if (process.argv[2] != null || process.argv[2] != "") {
 	else if (command === "spotify-this-song") {
 
 		if (media == "" || media == null) {
+			// default song is Careless Whisper
 			media = "Careless Whisper";
+
+			fs.appendFile(textFile, "\nDefault Media: " + media, function(err) {
+				// append to log.txt
+				if (err) {
+					console.log(err);
+				}
+			});
 		}
 
 		spotifyCommand(command, media);
@@ -80,7 +104,15 @@ if (process.argv[2] != null || process.argv[2] != "") {
 	else if (command === "movie-this") {
 
 		if (media == "" || media == null) {
+			// default movie is Shrek
 			media = "Shrek";
+
+			fs.appendFile(textFile, "\nDefault Media: " + media, function(err) {
+				// append to log.txt
+				if (err) {
+					console.log(err);
+				}
+			});
 		}
 
 		movieCommand(command, media);
@@ -110,6 +142,7 @@ if (process.argv[2] != null || process.argv[2] != "") {
 function twitterCommand(yourCommand) {
 
 	client.get('statuses/user_timeline', params, function(error, tweets, response) {
+		// get the users's timeline
 
 		if (error) {
 			console.log(error);
@@ -131,6 +164,17 @@ function twitterCommand(yourCommand) {
 				console.log("");
 				console.log("");
 				}
+
+				// append to log.txt
+				fs.appendFile(textFile, "\n===============================" +
+					"\n \n \nTweets By: " + tweets[i].user.screen_name + 
+				"\nTweet Created: " + tweets[i].created_at + 
+				"\nTweets: " + tweets[i].text + "\n\n", function(err){
+
+					if (err) {
+						console.log(err);
+					}
+				});
 			}
 
 		}
@@ -142,6 +186,7 @@ function spotifyCommand(yourCommand, yourSong) {
 
 	spotify
 		.search({type:'track', query: yourSong, limit: 1}, function(err, response){
+			// search for a spotify song
 
 			if (err) {
 				return console.log(err);
@@ -158,12 +203,26 @@ function spotifyCommand(yourCommand, yourSong) {
 				console.log("Song Preview: " + response.tracks.items[0].preview_url);	
 				console.log("");
 				console.log("");	
+
+				// append to log.txt
+				fs.appendFile(textFile, "\n===============================" +
+					"\n\n\nSong Title: " + response.tracks.items[0].name + 
+					"\nArtist: " + response.tracks.items[0].artists[0].name +
+					"\nAlbum: " + response.tracks.items[0].album.name +
+					"\nSong Preview: " + response.tracks.items[0].preview_url +
+					"\n\n", function(err){
+
+						if (err) {
+							console.log(err);
+						}
+				});
 			}
 		});
 }
 	
 function movieCommand(yourCommand, yourMovie) {
 
+	// construct url for omdb movie search
 	var queryURL = "https://www.omdbapi.com?apikey=" + OMDBKey + "&t=" + media;
 
 	request(queryURL, function(error, response, body) {
@@ -185,6 +244,22 @@ function movieCommand(yourCommand, yourMovie) {
 			console.log("Rotten Tomatoes URL: https://www.rottentomatoes.com/m/" + yourMovie);
 			console.log("");
 			console.log("");
+
+			fs.appendFile(textFile, "\n===============================" +
+				"\n\n\nTitle: " + info.Title +
+				"\nRelease Year: " + info.Year +
+				"\nIMDB Rating: " + info.imdbRating +
+				"\nCountry of Production: " + info.Country +
+				"\nLanguage of the Movie: " + info.Language +
+				"\nMovie Plot: " + info.Plot +
+				"\nMovie Actors: " + info.Actors +
+				"\nRotten Tomatoes URL: https://www.rottentomatoes.com/m/" + yourMovie +
+				"\n\n", function(err){
+
+					if (err) {
+						console.log(err);
+					}
+				});
 			
 		}
 	});
@@ -199,6 +274,7 @@ function doWhatCommand(yourInstructions) {
 		}
 
 		else {
+			// splits the command in the file based on the comma and space
 			var data = data.split(", ");
 
 			command = data[0];
