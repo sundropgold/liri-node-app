@@ -88,7 +88,9 @@ if (process.argv[2] != null || process.argv[2] != "") {
 
 	else if (command === "do-what-it-says") {
 
-		doWhatCommand(command);
+		var instructions = process.argv;
+
+		doWhatCommand(instructions);
 
 	}
 
@@ -188,6 +190,47 @@ function movieCommand(yourCommand, yourMovie) {
 	});
 }
 
-function doWhatCommand(yourCommand) {
+function doWhatCommand(yourInstructions) {
+
+	fs.readFile("random.txt", "utf8", function(error, data) {
+
+		if (error) {
+			return console.log(error);
+		}
+
+		else {
+			var data = data.split(", ");
+
+			command = data[0];
+			media = data[1];
+
+			if (command === "my-tweets") {
+
+				twitterCommand(command);
+
+			}
+
+			else if (command === "spotify-this-song") {
+
+				spotifyCommand(command, media);
+			}
+
+			else if (command === "movie-this") {
+
+				movieCommand(command, media);
+
+			}
+
+			else {
+				console.log("That option is unavailable. Please try again and type in a command as your third argument.");
+				console.log("Your options are: ");
+				console.log("==> 'my-tweets'");
+				console.log("==> 'spotify-this-song'");
+				console.log("==> 'movie-this'");
+				console.log("==> 'do-what-it-says'");	
+			}
+		}
+	});
+
 
 }
