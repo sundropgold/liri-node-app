@@ -15,6 +15,9 @@ var Twitter = require("twitter");
 // get spotify package
 var Spotify = require('node-spotify-api');
 
+// get request package
+var request = require('request');
+
 // KEYS ------------------------------------------- //
 
 // the code to grab the data from keys.js
@@ -43,15 +46,17 @@ var spotify = new Spotify({
 	secret: spotifyClientSecret
 });
 
+// OMDB ------------------------------------------- //
+
+var OMDBKey = "40e9cece";
+
 // PROMPT FOR COMMAND ------------------------------------------- //
 
 // - - - - - from command line
 if (process.argv[2] != null || process.argv[2] != "") {
 	var command = process.argv[2];
-	console.log("command: " + command);
 
 	var media = process.argv.splice(3).join(" ");
-	console.log("media: " + media);
 
 	// functions for chosen command
 
@@ -72,12 +77,16 @@ if (process.argv[2] != null || process.argv[2] != "") {
 		spotifyCommand(command, media);
 	}
 
-	else if (yourCommand === "movie-this") {
+	else if (command === "movie-this") {
+
+		if (media == "" || media == null) {
+			media = "Shrek";
+		}
 
 		movieCommand(command, media);
 	}
 
-	else if (yourCommand === "do-what-it-says") {
+	else if (command === "do-what-it-says") {
 
 		doWhatCommand(command);
 
@@ -153,6 +162,30 @@ function spotifyCommand(yourCommand, yourSong) {
 	
 function movieCommand(yourCommand, yourMovie) {
 
+	var queryURL = "https://www.omdbapi.com?apikey=" + OMDBKey + "&t=" + media;
+
+	request(queryURL, function(error, response, body) {
+
+		if (!error && response.statusCode == 200) {
+
+			var info = JSON.parse(body);
+
+			console.log("===============================");
+			console.log("");
+			console.log("");
+			console.log("Title: " + info.Title);
+			console.log("Release Year: " + info.Year);
+			console.log("IMDB Rating: " + info.imdbRating);
+			console.log("Country of Production: " + info.Country);
+			console.log("Language of the Movie: " + info.Language);
+			console.log("Movie Plot: " + info.Plot);
+			console.log("Movie Actors: " + info.Actors);
+			console.log("Rotten Tomatoes URL: https://www.rottentomatoes.com/m/" + yourMovie);
+			console.log("");
+			console.log("");
+			
+		}
+	});
 }
 
 function doWhatCommand(yourCommand) {
