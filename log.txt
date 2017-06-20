@@ -193,3 +193,81 @@ Artist: Backstreet Boys
 Album: The Hits--Chapter One
 Song Preview: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=6583f73b8a6c4d1abb57ab9f6b2b8e14
 
+
+Command: undefined
+Media: 
+Command: movie-this
+Media: 
+Default Media: Shrek
+===============================
+
+
+Title: Shrek
+Release Year: 2001
+IMDB Rating: 7.9
+Country of Production: USA
+Language of the Movie: English
+Movie Plot: After his swamp is filled with magical creatures, Shrek agrees to rescue Princess Fiona for a villainous lord in order to get his land back.
+Movie Actors: Mike Myers, Eddie Murphy, Cameron Diaz, John Lithgow
+Rotten Tomatoes URL: https://www.rottentomatoes.com/m/Shrek
+
+
+Command: movie-this
+Media: skyfall
+===============================
+
+
+Title: Skyfall
+Release Year: 2012
+IMDB Rating: 7.8
+Country of Production: UK, USA
+Language of the Movie: English
+Movie Plot: Bond's loyalty to M is tested when her past comes back to haunt her. Whilst MI6 comes under attack, 007 must track down and destroy the threat, no matter how personal the cost.
+Movie Actors: Daniel Craig, Judi Dench, Javier Bardem, Ralph Fiennes
+Rotten Tomatoes URL: https://www.rottentomatoes.com/m/skyfall
+
+
+Command: movie-this
+Media: sky high
+===============================
+
+
+Title: Sky High
+Release Year: 2005
+IMDB Rating: 6.2
+Country of Production: USA
+Language of the Movie: English, Cantonese
+Movie Plot: Set in an era where superheroes are commonly known and accepted, young William Stronghold, the son of the Commander and Jetstream, tries to find a balance between being a normal teenager and an extraordinary being.
+Movie Actors: Michael Angarano, Kurt Russell, Kelly Preston, Danielle Panabaker
+Rotten Tomatoes URL: https://www.rottentomatoes.com/m/sky high
+
+
+Command: movie-this
+Media: moana
+===============================
+
+
+Title: Moana
+Release Year: 2016
+IMDB Rating: 7.7
+Country of Production: USA
+Language of the Movie: English
+Movie Plot: In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches an impetuous Chieftain's daughter's island, she answers the Ocean's call to seek out the Demigod to set things right.
+Movie Actors: Auli'i Cravalho, Dwayne Johnson, Rachel House, Temuera Morrison
+Rotten Tomatoes URL: https://www.rottentomatoes.com/m/moana
+
+
+Command: movie-this
+Media: frozen
+===============================
+
+
+Title: Frozen
+Release Year: 2013
+IMDB Rating: 7.5
+Country of Production: USA
+Language of the Movie: English, Icelandic
+Movie Plot: When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister, Anna, teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.
+Movie Actors: Kristen Bell, Idina Menzel, Jonathan Groff, Josh Gad
+Rotten Tomatoes URL: https://www.rottentomatoes.com/m/frozen
+
