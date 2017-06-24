@@ -223,7 +223,7 @@ function spotifyCommand(yourCommand, yourSong) {
 function movieCommand(yourCommand, yourMovie) {
 
 	// construct url for omdb movie search
-	var queryURL = "https://www.omdbapi.com?apikey=" + OMDBKey + "&t=" + media;
+	var queryURL = "https://www.omdbapi.com?apikey=" + OMDBKey + "&t=" + media + "&tomatoes=true";
 
 	request(queryURL, function(error, response, body) {
 
@@ -241,7 +241,7 @@ function movieCommand(yourCommand, yourMovie) {
 			console.log("Language of the Movie: " + info.Language);
 			console.log("Movie Plot: " + info.Plot);
 			console.log("Movie Actors: " + info.Actors);
-			console.log("Rotten Tomatoes URL: https://www.rottentomatoes.com/m/" + yourMovie);
+			console.log("Rotten Tomatoes URL: "  + info.tomatoURL);
 			console.log("");
 			console.log("");
 
@@ -253,7 +253,7 @@ function movieCommand(yourCommand, yourMovie) {
 				"\nLanguage of the Movie: " + info.Language +
 				"\nMovie Plot: " + info.Plot +
 				"\nMovie Actors: " + info.Actors +
-				"\nRotten Tomatoes URL: https://www.rottentomatoes.com/m/" + yourMovie +
+				"\nRotten Tomatoes URL: " + info.tomatoURL +
 				"\n\n", function(err){
 
 					if (err) {
