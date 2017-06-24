@@ -319,3 +319,202 @@ Movie Plot: After his swamp is filled with magical creatures, Shrek agrees to re
 Movie Actors: Mike Myers, Eddie Murphy, Cameron Diaz, John Lithgow
 Rotten Tomatoes URL: http://www.rottentomatoes.com/m/shrek/
 
+
+Command: my-tweets
+Media: 
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Tue Jun 20 00:13:26 +0000 2017
+Tweets: take a fruitin sip babes https://t.co/2YQYDq2MF7
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Mon Jun 19 22:01:13 +0000 2017
+Tweets: which came first the fruit or the color?
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Mon Jun 19 22:00:26 +0000 2017
+Tweets: vitamin c keeps you young and beautiful #OrangeFacts
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Mon Jun 19 21:59:10 +0000 2017
+Tweets: i'll vitamin c you later babe B)
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Mon Jun 19 21:55:19 +0000 2017
+Tweets: i could be your fanta sea
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Mon Jun 19 21:51:04 +0000 2017
+Tweets: guess you could say i have a lot of a PEEL
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Mon Jun 19 21:50:38 +0000 2017
+Tweets: roses are red
+berries are blue
+oranges are orange and that makes them cool
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Mon Jun 19 21:50:05 +0000 2017
+Tweets: what did the murderous orange call itself?
+
+the blood orange...
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Mon Jun 19 21:49:27 +0000 2017
+Tweets: how did the orange get so smart?
+
+because it CONCENTRATED
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Mon Jun 19 21:48:37 +0000 2017
+Tweets: why did the orange go to the doctor?
+
+it wasn't peeling well
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Mon Jun 19 21:48:02 +0000 2017
+Tweets: why do oranges wear suntan lotion?
+
+BECAUSE THEY PEEL
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Thu Jun 15 21:40:37 +0000 2017
+Tweets: don't forget your daily Vitamin C for some Vitamin Cool!!
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Thu Jun 15 21:39:55 +0000 2017
+Tweets: O R A N G E
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Thu Jun 15 21:38:58 +0000 2017
+Tweets: orange is the new black
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Thu Jun 15 21:37:41 +0000 2017
+Tweets: knock knock
+who's there?
+orange
+orange who?
+orange you glad to see me?
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Thu Jun 15 21:37:23 +0000 2017
+Tweets: orange is love, orange is life
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Thu Jun 15 21:37:11 +0000 2017
+Tweets: #POSIN' https://t.co/X1rMDRxJHH
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Thu Jun 15 21:36:34 +0000 2017
+Tweets: UNPEELED https://t.co/TDQ4HrgZLG
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Thu Jun 15 21:36:12 +0000 2017
+Tweets: family photos https://t.co/7KD5V3h1wi
+
+
+===============================
+ 
+ 
+Tweets By: orangetxt
+Tweet Created: Thu Jun 15 21:35:04 +0000 2017
+Tweets: #ThrowbackThursday https://t.co/jvxdFrSmX3
+
+
+Command: spotify-this-song
+Media: 
+Default Media: Careless Whisper
+===============================
+
+
+Song Title: Careless Whisper
+Artist: George Michael
+Album: Ladies And Gentlemen... The Best Of George Michael
+Song Preview: https://p.scdn.co/mp3-preview/75d3d091213d60d9f3ed2c0698b846177076b0d0?cid=6583f73b8a6c4d1abb57ab9f6b2b8e14
+
+
+Command: do-what-it-says
+Media: 
+===============================
+
+
+Song Title: I Want It That Way
+Artist: Backstreet Boys
+Album: The Hits--Chapter One
+Song Preview: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=6583f73b8a6c4d1abb57ab9f6b2b8e14
+
